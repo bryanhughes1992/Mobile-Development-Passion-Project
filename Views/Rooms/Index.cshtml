@@ -1,0 +1,75 @@
+﻿@model IEnumerable<PASSION_PROJECT_MVP.Models.Room>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.House.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomLength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomWidth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Demolition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewWalls)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Drywall)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Floor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.House.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomLength)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomWidth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Demolition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewWalls)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Drywall)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Floor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RoomId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RoomId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RoomId })
+        </td>
+    </tr>
+}
+
+</table>

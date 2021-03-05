@@ -29,5 +29,9 @@ namespace PASSION_PROJECT_MVP.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<House> Houses { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Room> Rooms { get; set; }
     }
 }

@@ -1,0 +1,88 @@
+﻿@model PASSION_PROJECT_MVP.Models.Room
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Room</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.House.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.House.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomWidth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomWidth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Demolition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Demolition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewWalls)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewWalls)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Drywall)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drywall)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Floor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Floor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
