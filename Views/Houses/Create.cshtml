@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Sign-Up!</h2>
+<h2>Enter Your Information</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -22,6 +22,7 @@
         </div>
 
         <div class="form-group">
+            <!--Label for House owner's first name-->
             @Html.Label("First Name", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CustomerFirstName, new { htmlAttributes = new { @class = "form-control" } })
@@ -30,6 +31,7 @@
         </div>
 
         <div class="form-group">
+            <!--Label for owner last name-->
             @Html.Label("Last Name", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CustomerLastName, new { htmlAttributes = new { @class = "form-control" } })
@@ -38,6 +40,7 @@
         </div>
 
         <div class="form-group">
+            <!--Label for Phone Number-->
             @Html.Label("Phone Number", htmlAttributes: new { @class = "control-label col-md-2" })  
             <div class="col-md-10">
                 @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
