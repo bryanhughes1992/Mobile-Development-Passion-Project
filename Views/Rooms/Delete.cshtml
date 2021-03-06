@@ -4,11 +4,8 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
+<h2>Delete This Room?</h2>
 <div>
-    <h4>Room</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -20,7 +17,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.RoomLength)
+            @Html.Label("Room Length")
         </dt>
 
         <dd>
@@ -28,7 +25,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.RoomWidth)
+            @Html.Label("Room Width")
         </dt>
 
         <dd>
@@ -44,7 +41,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NewWalls)
+            @Html.Label("New Walls")
         </dt>
 
         <dd>
@@ -52,7 +49,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DrywallRepair)
+            @Html.Label("Drywall Repair")
         </dt>
 
         <dd>
@@ -60,7 +57,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DrywallInstallation)
+            @Html.Label("Drywall Installation")
         </dt>
 
         <dd>
@@ -68,7 +65,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FloorInstallation)
+            @Html.Label("Type of Flooring")
         </dt>
 
         <dd>
@@ -76,7 +73,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NewWindows)
+            @Html.Label("New Windows")
         </dt>
 
         <dd>
@@ -84,7 +81,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NewDoors)
+            @Html.Label("New Doors")
         </dt>
 
         <dd>
@@ -98,7 +95,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Back to Rooms", "Index")
         </div>
     }
 </div>

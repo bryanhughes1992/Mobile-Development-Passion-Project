@@ -55,7 +55,7 @@ namespace PASSION_PROJECT_MVP.Controllers
                 {
                     db.Houses.Add(house);
                     db.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Create", "Rooms");
                 }
                 
                 return RedirectToAction("Create", "Rooms");

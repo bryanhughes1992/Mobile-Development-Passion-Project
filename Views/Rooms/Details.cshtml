@@ -4,10 +4,9 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Room Details</h2>
 
 <div>
-    <h4>Room</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -19,7 +18,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.RoomLength)
+            @Html.Label("Room Length")
         </dt>
 
         <dd>
@@ -27,7 +26,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.RoomWidth)
+            @Html.Label("Room Width")
         </dt>
 
         <dd>
@@ -43,7 +42,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NewWalls)
+            @Html.Label("New Walls")
         </dt>
 
         <dd>
@@ -51,7 +50,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DrywallRepair)
+            @Html.Label("Drywall Repair")
         </dt>
 
         <dd>
@@ -59,7 +58,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DrywallInstallation)
+            @Html.Label("Drywall Installation")
         </dt>
 
         <dd>
@@ -67,7 +66,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FloorInstallation)
+            @Html.Label("Type of Flooring")
         </dt>
 
         <dd>
@@ -75,7 +74,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NewWindows)
+            @Html.Label("New Windows")
         </dt>
 
         <dd>
@@ -83,7 +82,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NewDoors)
+            @Html.Label("New Doors")
         </dt>
 
         <dd>
@@ -94,5 +93,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.RoomId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to Rooms", "Index")
 </p>
