@@ -181,7 +181,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HousesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -193,13 +192,21 @@
     <Compile Include="Migrations\202103052211285_initial-migration.Designer.cs">
       <DependentUpon>202103052211285_initial-migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103052306284_updated-fields.cs" />
+    <Compile Include="Migrations\202103052306284_updated-fields.Designer.cs">
+      <DependentUpon>202103052306284_updated-fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103062107553_mig2.cs" />
+    <Compile Include="Migrations\202103062107553_mig2.Designer.cs">
+      <DependentUpon>202103062107553_mig2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\House.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\ViewModel\HouseCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -264,11 +271,6 @@
     <Content Include="Views\Houses\Details.cshtml" />
     <Content Include="Views\Houses\Edit.cshtml" />
     <Content Include="Views\Houses\Index.cshtml" />
-    <Content Include="Views\Customers\Create.cshtml" />
-    <Content Include="Views\Customers\Delete.cshtml" />
-    <Content Include="Views\Customers\Details.cshtml" />
-    <Content Include="Views\Customers\Edit.cshtml" />
-    <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Rooms\Create.cshtml" />
     <Content Include="Views\Rooms\Delete.cshtml" />
     <Content Include="Views\Rooms\Details.cshtml" />
@@ -294,6 +296,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103052211285_initial-migration.resx">
       <DependentUpon>202103052211285_initial-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103052306284_updated-fields.resx">
+      <DependentUpon>202103052306284_updated-fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103062107553_mig2.resx">
+      <DependentUpon>202103062107553_mig2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

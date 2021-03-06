@@ -27,13 +27,19 @@
             @Html.DisplayNameFor(model => model.NewWalls)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Drywall)
+            @Html.DisplayNameFor(model => model.DrywallRepair)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Floor)
+            @Html.DisplayNameFor(model => model.DrywallInstallation)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Image)
+            @Html.DisplayNameFor(model => model.FloorInstallation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewWindows)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewDoors)
         </th>
         <th></th>
     </tr>
@@ -56,13 +62,19 @@
             @Html.DisplayFor(modelItem => item.NewWalls)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Drywall)
+            @Html.DisplayFor(modelItem => item.DrywallRepair)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Floor)
+            @Html.DisplayFor(modelItem => item.DrywallInstallation)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Image)
+            @Html.DisplayFor(modelItem => item.FloorInstallation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewWindows)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewDoors)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.RoomId }) |

@@ -48,7 +48,7 @@ namespace PASSION_PROJECT_MVP.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RoomId,RoomLength,RoomWidth,Demolition,NewWalls,Drywall,Floor,Image,HouseId")] Room room)
+        public ActionResult Create([Bind(Include = "RoomId,RoomLength,RoomWidth,Demolition,NewWalls,DrywallRepair,DrywallInstallation,FloorInstallation,NewWindows,NewDoors,HouseId")] Room room)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace PASSION_PROJECT_MVP.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RoomId,RoomLength,RoomWidth,Demolition,NewWalls,Drywall,Floor,Image,HouseId")] Room room)
+        public ActionResult Edit([Bind(Include = "RoomId,RoomLength,RoomWidth,Demolition,NewWalls,DrywallRepair,DrywallInstallation,FloorInstallation,NewWindows,NewDoors,HouseId")] Room room)
         {
             if (ModelState.IsValid)
             {

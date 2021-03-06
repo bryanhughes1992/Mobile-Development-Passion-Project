@@ -11,10 +11,10 @@ namespace PASSION_PROJECT_MVP.Models
         public int HouseId { get; set; }
         public string Address { get; set; }
 
-        [ForeignKey("Customer")]
-        public int CustomerId { get; set; }
+        public string CustomerFirstName { get; set; }
+        public string CustomerLastName { get; set; }
 
-        public Customer Customer { get; set; }
+        public string PhoneNumber { get; set; }
 
         public ICollection<Room> Rooms { get; set; }
 

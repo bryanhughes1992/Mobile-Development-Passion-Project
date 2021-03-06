@@ -17,8 +17,7 @@ namespace PASSION_PROJECT_MVP.Controllers
         // GET: Houses
         public ActionResult Index()
         {
-            var houses = db.Houses.Include(h => h.Customer);
-            return View(houses.ToList());
+            return View(db.Houses.ToList());
         }
 
         // GET: Houses/Details/5
@@ -39,7 +38,6 @@ namespace PASSION_PROJECT_MVP.Controllers
         // GET: Houses/Create
         public ActionResult Create()
         {
-            ViewBag.CustomerId = new SelectList(db.Customers, "CustomerId", "FirstName");
             return View();
         }
 
@@ -48,7 +46,7 @@ namespace PASSION_PROJECT_MVP.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "HouseId,Address,CustomerId")] House house)
+        public ActionResult Create([Bind(Include = "HouseId,Address,CustomerFirstName,CustomerLastName,PhoneNumber")] House house)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +55,6 @@ namespace PASSION_PROJECT_MVP.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CustomerId = new SelectList(db.Customers, "CustomerId", "FirstName", house.CustomerId);
             return View(house);
         }
 
@@ -73,7 +70,6 @@ namespace PASSION_PROJECT_MVP.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CustomerId = new SelectList(db.Customers, "CustomerId", "FirstName", house.CustomerId);
             return View(house);
         }
 
@@ -82,7 +78,7 @@ namespace PASSION_PROJECT_MVP.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "HouseId,Address,CustomerId")] House house)
+        public ActionResult Edit([Bind(Include = "HouseId,Address,CustomerFirstName,CustomerLastName,PhoneNumber")] House house)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +86,6 @@ namespace PASSION_PROJECT_MVP.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CustomerId = new SelectList(db.Customers, "CustomerId", "FirstName", house.CustomerId);
             return View(house);
         }
 

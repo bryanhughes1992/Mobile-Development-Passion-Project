@@ -13,12 +13,16 @@ namespace PASSION_PROJECT_MVP.Models
         public decimal RoomWidth { get; set; }
         public bool Demolition { get; set; }
         public int NewWalls { get; set; }
-        public string Drywall { get; set; }
-        public string Floor { get; set; }
-        public byte[] Image { get; set; }
+        public bool DrywallRepair { get; set; }
+        public bool DrywallInstallation { get; set; }
+        public string FloorInstallation { get; set; }
+        public bool NewWindows { get; set; }
+        public bool NewDoors { get; set; }
+
+        //public byte[] Image { get; set; }
+
         [ForeignKey("House")]
         public int HouseId { get; set; }
         public House House { get; set; }
-
     }
 }
