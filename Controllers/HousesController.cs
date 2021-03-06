@@ -50,9 +50,15 @@ namespace PASSION_PROJECT_MVP.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Houses.Add(house);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                House House = db.Houses.Where(h => h.PhoneNumber == house.PhoneNumber).FirstOrDefault(); 
+                if (House == null)
+                {
+                    db.Houses.Add(house);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                
+                return RedirectToAction("Create", "Rooms");
             }
 
             return View(house);

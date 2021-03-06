@@ -10,7 +10,7 @@ namespace PASSION_PROJECT_MVP.Controllers
     {
         public ActionResult Index()
         {
-            return RedirectToAction("Create", "Rooms");
+            return RedirectToAction("Create", "Houses");
         }
 
         public ActionResult About()
